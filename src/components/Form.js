@@ -35,7 +35,7 @@ export const Form = () => {
     // preprocess a JSON list of connections to an adjacency list Graph
     function connectionsListToGraph(connections) {
         const Graph = {}
-        for (let  { name, friends } of connections) {
+        for (let { name, friends } of connections) {
             Graph[name] = friends // allow fast lookup of a given person's friends
         }
         return Graph
@@ -58,7 +58,7 @@ export const Form = () => {
                 if (friend === target) {
                     connectionPaths.push(path.concat(target));
                 } else {
-                    alert("No Result for Searching Relationship")
+                    findConnectionsDFS(friend, target, path.concat(friend), visited)
                 }
             }
         }
