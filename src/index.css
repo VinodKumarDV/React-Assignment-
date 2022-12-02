@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    overflow-x: hidden;
+    overflow-y: auto;    
+}
+
+.wrapper h1{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.wrapper p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.wrapper .main{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .form-container{
+    width: 500px;
+    height: 280px;
+    background-color: #e4e4e4;
+    margin: 20px auto;
+    padding: 20px;   
+}
+
+.DataCont {
+    flex-direction: row;
+}
+
+.wrapper .form-container .btn{
+    width: 100%;   
+}
+
+.add {
+    margin-left: 15.5rem;
+    cursor: pointer;
+    margin-right: 0.8rem;
+}
+
+.ShowData {
+    cursor: pointer;
+}
+
+.wrapper .view-container{
+    width: 600px;    
+    background-color: #e4e4e4;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-btn{
+    color: red;
+    cursor: pointer;
+}
+
+table{
+    max-width: 500px;
+    background-color: #f7f7f7;
+}
+
+tbody{
+    margin-top: 25px;
+}
