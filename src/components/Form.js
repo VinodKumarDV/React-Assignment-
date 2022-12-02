@@ -66,16 +66,18 @@ export const Form = () => {
         return connectionPaths;
     }
 
+    // function to find Relationship
     const handleFindFrd = (e) => {
         const data = getConnections(name, frdName, connections)
         setData(data)
-
+        
         setName('');
         setFrdName('');
     }
-
+    
+    // function to add Relationship
     const handleAddFrd = (e) => {
-
+        
         let friend = {
             id: new Date().getTime().toString(),
             name: name,
@@ -86,18 +88,15 @@ export const Form = () => {
         setName('');
         setFrdName('');
     }
-
+    
+    // function to delete Relationship
     const deleteFrd = (id) => {
         const filteredFrnd = connections.filter((element, index) => {
             return element.id !== id
         })
         setConnections(filteredFrnd);
     }
-
-    useEffect(() => {
-        console.log(connections)
-    }, [connections])
-
+    
     return (
         <div className='wrapper'>
             <h1>{data ? 'Result for Searching' : findAdd ? 'Add': 'Find' } Relationship</h1>
